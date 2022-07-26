@@ -1,0 +1,27 @@
+/* Certifications */
+.projects .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #010483;
+}
+.projects .content ul {
+  list-style: none;
+  padding: 0;
+}
+.projects .content ul li {
+  padding-bottom: 2px;
+}
+.projects .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #1acc8d;
+}
+
+@media only screen and (max-width: 576px) {
+  .projects .content {
+    order: 0;
+  }
+  .projects .pslideshow {
+    order: 1;
+  }
+}
