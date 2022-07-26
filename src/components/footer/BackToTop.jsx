@@ -23,7 +23,7 @@ export default function BackToTop() {
 
     return (
         <>
-            {isVisible ? <a href="#" className="back-to-top d-flex align-items-center justify-content-center"> <i className="bi bi-arrow-up-short" />
+            {isVisible ? <a href="#home" className="back-to-top d-flex align-items-center justify-content-center"> <i className="bi bi-arrow-up-short" />
             </a> : ""}
 
         </>

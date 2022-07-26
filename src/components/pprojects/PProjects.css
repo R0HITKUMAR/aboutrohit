@@ -3,22 +3,31 @@
   margin-top: 100px;
 }
 .pprojects .content h3 {
+  margin: 20px 0px;
   font-weight: 600;
   font-size: 26px;
   color: #010483;
 }
-.pprojects img{
+.pprojects img {
   width: 100%;
   height: auto;
   align-items: center;
-  justify-content: center;}
+  justify-content: center;
+}
 
-.project-card{
+.project-card {
   margin-bottom: 40px;
 }
 
-.pprojects .main-btn{
+.pprojects .main-btn {
   padding: inherit 10px;
   margin: 2px 2px;
 }
 
+/* Small Screen */
+@media screen and (max-width: 768px) {
+  .pprojects .content h3 {
+    margin: 10px 0px;
+    font-size: 20px;
+  }
+}

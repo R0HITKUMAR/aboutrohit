@@ -17,7 +17,7 @@ export default function Badges() {
                 <div className="text-center">
                     {data.map((d, index) => {
                         return (
-                            <a key={index} href={d.url} title={d.name} target="_blank">
+                            <a key={index} href={d.url} title={d.name} target="_blank" rel="noreferrer">
                                 <img src={d.img} alt={d.name} style={imgstyle} />
                             </a>
                         );

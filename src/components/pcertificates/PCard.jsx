@@ -6,7 +6,7 @@ export default function PCard(props) {
       <div className="col-lg-4 col-12">
         <div className="box">
           <div className="content">
-            <iframe src={props.data.View_Link} scrolling="no"></iframe>
+            <iframe src={props.data.View_Link} scrolling="no" title={props.data.Certificate_Name}></iframe>
             <h3 className="m-2">{props.data.Certificate_Name}</h3>
             <h5 className="p-2">
               {props.data.Certificate_No !== "-" && (
@@ -29,6 +29,7 @@ export default function PCard(props) {
               href={props.data.Verify_Link}
               className="main-btn"
               target="_blank"
+              rel="noreferrer" 
             >
               Verify
             </a>

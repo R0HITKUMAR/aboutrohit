@@ -12,7 +12,7 @@ export default function PProjects() {
     if (Data) {
       setLoading(false);
     }
-  }, [Data]);
+  }, []);
 
   return (
     <section id="pprojects" className="pprojects">

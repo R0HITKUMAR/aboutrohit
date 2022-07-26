@@ -17,9 +17,12 @@
   color: #1acc8d;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 800px) {
   .projects .content {
     order: 0;
+  }
+  .projects .content h3 {
+    font-size: 18px;
   }
   .projects .pslideshow {
     order: 1;

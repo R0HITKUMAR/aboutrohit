@@ -25,7 +25,7 @@ export default function About() {
           <h3>{Details.text1}</h3>
           <p>({Details.text2})</p>
         </div>
-        <div className="text-center m-1">
+        <div className="text-center">
           {Links.map((A,index) => {
             return (
               <a key={index} href={A.url} className="main-btn">

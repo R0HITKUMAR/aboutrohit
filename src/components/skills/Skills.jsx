@@ -29,9 +29,9 @@ export default function Skills() {
                 return (
                   <div className="col-lg-3 col-md-4 col-6" key={index}>
                     <div className="icon-box">
-                      <img src={B.img} />
+                      <img src={B.img} alt={B.name} />
                       <h3 className="">
-                        <a href="#">{B.name}</a>
+                        <a href="/#" >{B.name}</a>
                       </h3>
                     </div>
                   </div>

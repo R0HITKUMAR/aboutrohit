@@ -28,7 +28,6 @@ const data = [
     id:0,
     title:'Decentralized E Voting using Block Chain',
     technology:'Blockchain & Cyber Security',
-    domain:"Web Development",
     img:"https://media.istockphoto.com/vectors/coming-soon-isolated-vector-icon-paper-style-promotion-sign-start-a-vector-id1273109788?k=20&m=1273109788&s=612x612&w=0&h=JStiZA3z_OG2FmCz5ZlV4axsxGWIy6-LrdOVTuZsyKg=",
     domain:'Web Development',
     duration:'Jan 2022 -  Present'

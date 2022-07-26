@@ -18,6 +18,9 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .certificates .content h3 {
+    font-size: 18px;
+  }
   .certificates .content {
     order: 0;
   }

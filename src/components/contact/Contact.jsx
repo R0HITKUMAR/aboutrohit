@@ -4,6 +4,7 @@ import "./Contact.css";
 
 export default function Contact() {
   const [alert, setAlert] = React.useState();
+  const [Flag, setFlag] = React.useState(true);
   const [data, setData] = React.useState({
     Name: "",
     Phone: "",
@@ -19,42 +20,43 @@ export default function Contact() {
         [name]: value,
       };
     });
+    const emailcheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (
+      (name === "Email" && emailcheck.test(value)) ||
+      (name === "Phone" && value.length === 10)
+    ) {
+      setAlert("");
+      setFlag(false);
+    } else {
+      setFlag(true);
+      setAlert(`Enter a Valid ${name} Address`);
+    }
   }
 
   function submitData(event) {
     event.preventDefault();
-    const db = getDatabase();
-    var ID = "RK" + Date.now();
-    const Timestamp = new Date().toDateString();
-    set(ref(db, "Contact-Form/" + ID), {
-      Name: data.Name,
-      Phone: data.Phone,
-      Email: data.Email,
-      Message: data.Message,
-      status: "Submitted",
-      Timestamp: Timestamp,
-    })
-      .then(() => {
-        setAlert(
-          <div
-            className="alert alert-success alert-dismissible text-center"
-            role="alert"
-          >
-            <strong>Success!</strong> Your message has been submitted.
-          </div>
-        );
-        setData({ Name: "", Phone: "", Email: "", Message: "" });
+    if (!Flag) {
+      const db = getDatabase();
+      var today = new Date().toLocaleString();
+      var ID = "RK" + Date.now();
+      set(ref(db, "Contact-Form/" + ID), {
+        Name: data.Name,
+        Phone: data.Phone,
+        Email: data.Email,
+        Message: data.Message,
+        Status: "Submitted",
+        TimeStamp: today,
       })
-      .catch((error) => {
-        setAlert(
-          <div
-            className="alert alert-danger alert-dismissible text-center"
-            role="alert"
-          >
-            <strong>Error!</strong> {error.message}
-          </div>
-        );
-      });
+        .then(() => {
+          setAlert("Success! Thanks for Contacting Me.");
+          setData({ Name: "", Phone: "", Email: "", Message: "" });
+        })
+        .catch((error) => {
+          setAlert("Error!</strong> {error.message}");
+        });
+    } else {
+      setAlert("Something is Missing");
+    }
   }
 
   return (
@@ -85,7 +87,11 @@ export default function Contact() {
             </div>
           </div>
           <div className="col-lg-7 mt-5 mt-lg-0">
-            <div id="contactFormAlert">{alert}</div>
+            {alert && (
+              <div className="alert text-center" role="alert">
+                {alert}
+              </div>
+            )}
             <form action="" method="post" role="form" className="contact-form">
               {/* ----------- */}
               <div className="row">

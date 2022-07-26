@@ -16,7 +16,7 @@ export default function Gallery() {
           <div className="col-md-7 col-12 cslideshow">
             <ImageGallery items={certificates} />
           </div>
-          <div className="col-md-5 col-12 mt-5 ml-5 content">
+          <div className="col-md-5 col-12 ml-5 content">
             <h3 className="text-center">Popular Certification</h3>
             <p className="text-center fst-italic">
               "Practice makes men perfect".

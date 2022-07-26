@@ -1,6 +1,5 @@
 import React from "react";
-import App from "../../firebase";
-import { getDatabase, onValue, ref, set } from "firebase/database";
+import { getDatabase,ref, set } from "firebase/database";
 
 export default function NewsletterForm() {
   const [EmailID, setEmailID] = React.useState("");
@@ -22,12 +21,14 @@ export default function NewsletterForm() {
 
   function submitData(event) {
     event.preventDefault();
+    var today = new Date().toLocaleString();
     if (!Flag) {
       const db = getDatabase();
       var ID = "RK" + Date.now();
       set(ref(db, "Newsletter-Form/" + ID), {
+        Name:"Not Available",
         Email_ID: EmailID,
-        Timestamp: Date.now(),
+        Timestamp: today,
       })
         .then(() => {
           setEmailID("");

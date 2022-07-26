@@ -93,7 +93,7 @@ section {
   display: flex !important;
 }
 
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .section-title h2 {
     font-size: 10px;
     font-weight: 300;
@@ -101,6 +101,9 @@ section {
   .section-title h2::after,
   .section-title h2::before {
     width: 60px;
+  }
+  .section-title p{
+    font-size: 24px;
   }
 }
 

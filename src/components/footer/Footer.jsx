@@ -71,7 +71,7 @@ export default function Footer() {
             <div className="col-lg-4 col-md-6 col-12">
               <div className="footer-info">
                 <h3>
-                  <img src={img} height={"50px"} />
+                  <img src={img} height={"50px"} alt="Logo-Rohit Kumar" />
                 </h3>
                 <h3>Rohit Kumar</h3>
                 <p className="pb-3">
@@ -108,7 +108,9 @@ export default function Footer() {
                   return (
                     <li key={index}>
                       <i className="bx bx-chevron-right" />{" "}
-                      <a href={link.url}>{link.name}</a>
+                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.name} 
+                      </a>
                     </li>
                   );
                 })}
@@ -121,7 +123,11 @@ export default function Footer() {
                   return (
                     <li key={index}>
                       <i className="bx bx-chevron-right" />{" "}
-                      <a href={handle.url} target="_blank">
+                      <a
+                        href={handle.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {handle.name}
                       </a>
                     </li>

@@ -1,5 +1,5 @@
 import React from "react";
-import Preloader from "../components/begin/Preloader";
+// import Preloader from "../components/begin/Preloader";
 import Hero from "../components/hero/Hero.jsx";
 import About from "../components/about/About.jsx";
 import Skills from "../components/skills/Skills.jsx";
@@ -10,8 +10,6 @@ import Badges from "../components/badges/Badges.jsx";
 import Blog from "../components/blog/Blog.jsx";
 import Map from "../components/contact/Map.jsx";
 import Contact from "../components/contact/Contact.jsx";
-import Footer from "../components/footer/Footer.jsx";
-import BackToTop from "../components/footer/BackToTop.jsx";
 
 export default function Home() {
   return (
@@ -27,8 +25,6 @@ export default function Home() {
       <Blog />
       <Map />
       <Contact />
-      <Footer />
-      <BackToTop />
     </>
   );
 }
