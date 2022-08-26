@@ -115,6 +115,11 @@
     display: none;
   }
 }
+.navbar-mobile button {
+  background: #fafaff00;
+  border: none;
+  padding: 0;
+}
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -145,12 +150,14 @@
 }
 .navbar-mobile ul li {
   text-align: center !important;
+  align-items: center;
 }
 .navbar-mobile > ul > li > button:before {
   text-align: center !important;
 }
 .navbar-mobile button,
 .navbar-mobile button:focus {
+  text-align: center!important;
   padding: 5px 20px;
   font-size: 20px;
   font-weight: bolder;
@@ -164,4 +171,8 @@
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
   margin: 15px;
+}
+
+.nav-link{
+  text-align: center !important;
 }

@@ -34,13 +34,13 @@ export default function Navbar() {
           </h1>
         </div>
         <nav id="navbar" className={isActive ? "navbar" : "navbar-mobile"}>
-          <ul>
+          <ul className="text-center">
             {Links.map((item, index) => {
               return (
-                <li key={index}>
-                  {item.url === "https://blog.rohitkumar.ml" || item.url === "https://admin.rohitkumar.ml" ? (
+                <li key={index} >
+                  {item.url === "https://blog.rohitkumar.ml" || item.url === "https://admin.aboutrohit.in" ? (
                     <a href={item.url} target="_blank" rel="noopener noreferrer">
-                      <button className="nav-link scrollto">
+                      <button className="nav-link scrollto text-center">
                         {item.name}
                       </button>
                     </a>

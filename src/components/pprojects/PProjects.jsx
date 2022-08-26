@@ -28,7 +28,7 @@ export default function PProjects(props) {
             <div className="row">
               {Data
                 ? Data.map((project, index) => (
-                    <PCards data={project} key={index} setDoc={props.setDoc} />
+                    <PCards data={project} key={index} id={index} setDoc={props.setDoc} />
                   ))
                 : ""}
             </div>

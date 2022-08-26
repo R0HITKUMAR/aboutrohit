@@ -14,6 +14,8 @@ import R4 from "./report/Report-MyAKTUGuide.pdf";
 import R5 from "./report/Report-PSG.pdf";
 import R6 from "./report/Report-Portfolios.pdf";
 import R7 from "./report/Report-Monumentsofindia.pdf";
+import R8 from "./report/Report-ResumeDP.pdf";
+import R9 from "./report/Report-Ayush.pdf";
 
 import V1 from "./view/view-RKP.png";
 import V2 from "./view/view-VerifyTechwamp.png";
@@ -22,20 +24,20 @@ import V4 from "./view/view-MyAKTUGuide.png";
 import V5 from "./view/view-PSG.png";
 import V6 from "./view/view-Portfolios.png";
 import V7 from "./view/view-Monumentsofindia.png";
+import V8 from "./view/view-ResumeDP.png";
+import V9 from "./view/view-Ayush.png";
 
 const data = [
   {
-    id:0,
-    title:'Decentralized E Voting using Block Chain',
-    technology:'Blockchain & Cyber Security',
-    img:"https://media.istockphoto.com/vectors/coming-soon-isolated-vector-icon-paper-style-promotion-sign-start-a-vector-id1273109788?k=20&m=1273109788&s=612x612&w=0&h=JStiZA3z_OG2FmCz5ZlV4axsxGWIy6-LrdOVTuZsyKg=",
-    domain:'Web Development',
-    duration:'Jan 2022 -  Present',
-    hash:"E-Voting",
-    imgur:"",
+    title: "Decentralized E Voting using Block Chain",
+    technology: "Blockchain & Cyber Security",
+    img: "https://media.istockphoto.com/vectors/coming-soon-isolated-vector-icon-paper-style-promotion-sign-start-a-vector-id1273109788?k=20&m=1273109788&s=612x612&w=0&h=JStiZA3z_OG2FmCz5ZlV4axsxGWIy6-LrdOVTuZsyKg=",
+    domain: "Web Development",
+    duration: "Jan 2022 -  Present",
+    hash: "E-Voting",
+    imgur: "",
   },
   {
-    id: 1,
     title: "Rohit Kumar Portfolio Website and Admin Dashboard",
     technology:
       "HTML, CSS, Bootstrap, JS, jQuery, ReactJS, Firebase Auth, Firebase Realtime Database, Firebase Storage etc",
@@ -51,17 +53,37 @@ const data = [
     des3: "Data Addition and Management using Admin Login",
     report: R1,
     buttons: [
-      { name: "Live Demo", url: "https://rohitkumar.ml" },
-      { name: "Admin Login", url: "https://admin.rohitkumar.ml" },
-      { name: "V3", url: "https://v3.rohitkumar.ml" },
-      { name: "V2", url: "https://v2.rohitkumar.ml" },
-      { name: "V1", url: "https://v1.rohitkumar.ml" },
+      { name: "Live Demo", url: "https://aboutrohit.in" },
+      { name: "Admin Login", url: "https://admin.aboutrohit.in" },
+      { name: "V3", url: "https://v3.aboutrohit.in" },
+      { name: "V2", url: "https://v2.aboutrohit.in" },
+      { name: "V1", url: "https://v1.aboutrohit.in" },
     ],
     hash: "Rohit-Kumar-Portfolio",
     imgur: "",
   },
   {
-    id: 2,
+    title: "ResumeDP : A Modern Resume Builder",
+    technology:
+      "HTML, CSS, Bootstrap, JS, jQuery, ReactJS, NodeJS, ExpressJS, MongoDB etc",
+    img: V8,
+    domain: "Web Development",
+    duration: "Aug 2022 - Sept 2022",
+    learn1: "Learn about ReactJS, NodeJS, ExpressJS, MongoDB",
+    learn2: "Learned How to Create API & Call API's",
+    learn3:
+      "Learn Fundamental Concepts of Authentication, PassportJS and BcryptJS etc",
+    learn4:
+      "Learn Hosting of NodeJS Server using Heroku & Frontend on Vercel & Netlify",
+    des1: "A Resume Builder Website used to Create Aewsome Resume",
+    des2: "Also works as a Online Portfolio",
+    des3: "Supports data Management",
+    report: R8,
+    buttons: [{ name: "Live Demo", url: "https://resumeDP.aboutrohit.in" }],
+    hash: "ResumeDP",
+    imgur: "",
+  },
+  {
     title:
       "Verify TECHWAMP : Certificates Verification, Generation & Cloud Drive (CStore)",
     technology: "HTML, CSS, JS, Bootstrap, jQuery, Firebase etc",
@@ -89,11 +111,31 @@ const data = [
         url: "https://v1.verifytechwamp.ml",
       },
     ],
-    hash:"Verify-TECHWAMP",
-    imgur:"",
+    hash: "Verify-TECHWAMP",
+    imgur: "",
   },
   {
-    id: 3,
+    title: "Ayush Healthcare: A Web Application for Healthcare",
+    technology:
+      "HTML, CSS, Bootstrap, JS, jQuery, Firebase Auth, Firebase Realtime Database, Firebase Storage etc",
+    img: V9,
+    domain: "Web Development",
+    duration: "March 2022",
+    learn1: "Learn about Firebase",
+    learn2: "Learned about getting data from APIs",
+    learn3:
+      "Experience of working in a team of 5 people work for the Smart India Hackathon 2022 (Internal)",
+    learn4:
+      "Work on Authentication, Query Form, Admin Dashboard and Hosting Section of this Project.",
+    des1: "A Web Application for Healthcare that is used to located Nearest Ayush Hospital as a task for the Smart India Hackathon 2022 under Ministry of Ayush.",
+    des2: "Contains Proper Query management System for the User.",
+    des3: "Features a Map that shows the nearest Ayush Hospital.",
+    report: R9,
+    buttons: [{ name: "Live Demo", url: "https://ayushhealthacare.ml" }],
+    hash: "Ayush-Healthcare",
+    imgur: "",
+  },
+  {
     title: "NSS Club (ABESEC) Official Website & Admin Portal",
     technology:
       "HTML, CSS, Bootstrap, JS, jQuery, Firebase Auth, Firebase Realtime Database, Firebase Storage etc",
@@ -124,11 +166,10 @@ const data = [
         url: "https://kalakriti.nssabesec.in",
       },
     ],
-    hash:"NSS-ABESEC",
-    imgur:"",
+    hash: "NSS-ABESEC",
+    imgur: "",
   },
   {
-    id: 4,
     title: "My AKTU Guide : An Educational Website for AKTU CSE Students",
     technology:
       "HTML, CSS, Bootstrap, JS, jQuery, Google API and Google Sheets",
@@ -144,15 +185,14 @@ const data = [
     des3: "Proper Live Notes facilities using Adobe Scan and Adobe Acrobat Reader and Google Drive for storing Notes",
     report: R4,
     buttons: [
-      { name: "Live Demo", url: "https://myaktuguide.ml" },
-      { name: "v2", url: "https://v2.myaktuguide.ml" },
-      { name: "v1", url: "https://v1.myaktuguide.ml" },
+      { name: "Live Demo", url: "https://myaktuguide.aboutrohit.in" },
+      { name: "v2", url: "https://v2.myaktuguide.aboutrohit.in" },
+      { name: "v1", url: "https://v1.myaktuguide.aboutrohit.in" },
     ],
-    hash:"My-AKTU-Guide",
-    imgur:"",
+    hash: "My-AKTU-Guide",
+    imgur: "",
   },
   {
-    id: 5,
     title: "PSG Electricals Pvt. Ltd. Website & Admin Dashboard",
     technology:
       "HTML, CSS, Bootstrap, JS, jQuery, ReactJS, Firebase Auth, Firebase Realtime Database, Firebase Storage etc",
@@ -171,11 +211,10 @@ const data = [
       { name: "Live Demo", url: "https://psgelectricals.com" },
       { name: "Admin", url: "https://app.psgelectricals.com" },
     ],
-    hash:"PSG",
-    imgur:"",
+    hash: "PSG",
+    imgur: "",
   },
   {
-    id: 6,
     title: "Portfolios Website of Many Peoples",
     technology:
       "HTML, CSS, Bootstrap, JS, jQuery, ReactJS, Firebase Auth, Firebase Realtime Database, Firebase Storage etc",
@@ -196,11 +235,10 @@ const data = [
       { name: "Nayan Kumar", url: "https://aboutnayan.ml" },
       { name: "Priyanshu Kashyap", url: "https://priyanshukashyap.ml" },
     ],
-    hash:"Portfolios",
-    imgur:"",
+    hash: "Portfolios",
+    imgur: "",
   },
   {
-    id: 7,
     title: "Monuments of India : A Travel Website",
     technology: "HTML, CSS & JavaScript",
     img: V7,
@@ -217,11 +255,11 @@ const data = [
     buttons: [
       {
         name: "Live Demo",
-        url: "https://monumentsofindia.ml",
+        url: "https://moi.aboutrohit.in",
       },
     ],
-    hash:"Monuments-of-India",
-    imgur:"",
+    hash: "Monuments-of-India",
+    imgur: "",
   },
 ];
 

@@ -1,6 +1,5 @@
 import React from "react";
-import Viewer, { Worker } from "@phuocng/react-pdf-viewer";
-import "@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css";
+
 
 export default function Modal(props) {
   const [show, setShow] = React.useState(true);
@@ -46,11 +45,13 @@ export default function Modal(props) {
             </button>
           </div>
           <div className="modal-body">
-            <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.min.js">
-              <div style={{ height: "750px" }}>
-                <Viewer fileUrl={props.url} />
-              </div>
-            </Worker>
+          <iframe
+              src={props.url}
+              width="100%"
+              height="600px"
+              frameBorder="0"
+              title="Attachment"
+            ></iframe>
           </div>
         </div>
       </div>

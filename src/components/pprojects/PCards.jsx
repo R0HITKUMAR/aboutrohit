@@ -8,7 +8,7 @@ export default function PCard(props) {
 
       <button onClick={() => navigate(`/project/${props.data.hash}`)}>
         <h3 className="text-center">
-          {props.data.id}. {props.data.title}
+          {props.id}. {props.data.title}
         </h3>
       </button>
 

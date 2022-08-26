@@ -1,4 +1,6 @@
 import React from "react";
+import Viewer, { Worker } from "@phuocng/react-pdf-viewer";
+import "@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css";
 
 export default function PCard(props) {
   return (
@@ -77,13 +79,11 @@ export default function PCard(props) {
             <p>Project Report</p>
           </div>
           <div className="content" style={{ marginBottom: "50px" }}>
-            <iframe
-              src={props.data.report}
-              width="100%"
-              height="600px"
-              frameBorder="0"
-              title="Project Report"
-            ></iframe>
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.min.js">
+              <div style={{ height: "600px" }}>
+                <Viewer fileUrl={props.data.report} />
+              </div>
+            </Worker>
           </div>
         </div>
       </section>
