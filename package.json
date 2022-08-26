@@ -3,19 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@phuocng/react-pdf-viewer": "^1.7.0",
     "eslint-config-react-app": "^7.0.1",
     "firebase": "^9.9.1",
-    "html-to-image": "^1.9.0",
-    "pdfjs-dist": "^2.14.305",
+    "pdfjs-dist": "^2.15.349",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.0",
     "react-dom": "^18.2.0",
     "react-image-gallery": "^1.2.8",
-    "react-pdf": "^5.7.2",
-    "react-pdf-to-image": "^1.0.2",
-    "react-query": "^4.0.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "source-map-loader": "^4.0.0",
+    "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "webpack-dev-server": "^4.9.3"
   }
 }

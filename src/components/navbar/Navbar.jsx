@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Logo from "../../img/logodark-nobg.png";
 
@@ -7,6 +8,8 @@ export default function Navbar() {
   const handleToggle = () => {
     setActive(!isActive);
   };
+
+  const navigate = useNavigate();
 
   const Links = [
     { name: "Home", url: "/home" },
@@ -35,9 +38,18 @@ export default function Navbar() {
             {Links.map((item, index) => {
               return (
                 <li key={index}>
-                  <a className="nav-link scrollto" href={item.url}>
-                    {item.name}
-                  </a>
+                  {item.url === "https://blog.rohitkumar.ml" || item.url === "https://admin.rohitkumar.ml" ? (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      <button className="nav-link scrollto">
+                        {item.name}
+                      </button>
+                    </a>
+                  ) : (
+
+                    <button className="nav-link scrollto" onClick={() => navigate(item.url)}>
+                      {item.name}
+                    </button>)
+                  }
                 </li>
               );
             })}

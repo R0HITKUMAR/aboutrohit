@@ -30,7 +30,9 @@ const data = [
     technology:'Blockchain & Cyber Security',
     img:"https://media.istockphoto.com/vectors/coming-soon-isolated-vector-icon-paper-style-promotion-sign-start-a-vector-id1273109788?k=20&m=1273109788&s=612x612&w=0&h=JStiZA3z_OG2FmCz5ZlV4axsxGWIy6-LrdOVTuZsyKg=",
     domain:'Web Development',
-    duration:'Jan 2022 -  Present'
+    duration:'Jan 2022 -  Present',
+    hash:"E-Voting",
+    imgur:"",
   },
   {
     id: 1,
@@ -55,6 +57,8 @@ const data = [
       { name: "V2", url: "https://v2.rohitkumar.ml" },
       { name: "V1", url: "https://v1.rohitkumar.ml" },
     ],
+    hash: "Rohit-Kumar-Portfolio",
+    imgur: "",
   },
   {
     id: 2,
@@ -85,6 +89,8 @@ const data = [
         url: "https://v1.verifytechwamp.ml",
       },
     ],
+    hash:"Verify-TECHWAMP",
+    imgur:"",
   },
   {
     id: 3,
@@ -118,6 +124,8 @@ const data = [
         url: "https://kalakriti.nssabesec.in",
       },
     ],
+    hash:"NSS-ABESEC",
+    imgur:"",
   },
   {
     id: 4,
@@ -140,6 +148,8 @@ const data = [
       { name: "v2", url: "https://v2.myaktuguide.ml" },
       { name: "v1", url: "https://v1.myaktuguide.ml" },
     ],
+    hash:"My-AKTU-Guide",
+    imgur:"",
   },
   {
     id: 5,
@@ -161,6 +171,8 @@ const data = [
       { name: "Live Demo", url: "https://psgelectricals.com" },
       { name: "Admin", url: "https://app.psgelectricals.com" },
     ],
+    hash:"PSG",
+    imgur:"",
   },
   {
     id: 6,
@@ -184,6 +196,8 @@ const data = [
       { name: "Nayan Kumar", url: "https://aboutnayan.ml" },
       { name: "Priyanshu Kashyap", url: "https://priyanshukashyap.ml" },
     ],
+    hash:"Portfolios",
+    imgur:"",
   },
   {
     id: 7,
@@ -206,6 +220,8 @@ const data = [
         url: "https://monumentsofindia.ml",
       },
     ],
+    hash:"Monuments-of-India",
+    imgur:"",
   },
 ];
 

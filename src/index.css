@@ -102,7 +102,7 @@ section {
   .section-title h2::before {
     width: 60px;
   }
-  .section-title p{
+  .section-title p {
     font-size: 24px;
   }
 }
@@ -194,3 +194,19 @@ section {
   background: #191ca9;
   color: #fff;
 }
+
+.modal-body {
+  padding: 0px !important;
+  margin: 0px !important;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.modal .fa {
+  color: black;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+

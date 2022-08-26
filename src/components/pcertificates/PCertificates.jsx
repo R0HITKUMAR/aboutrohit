@@ -6,7 +6,7 @@ import "./PCertificates.css";
 import PCard from "./PCard";
 import Loader from "../begin/Loader";
 
-export default function PCertificates() {
+export default function PCertificates(props) {
   const [certi, setCerti] = React.useState();
   const [loading, setLoading] = React.useState(true);
 
@@ -43,7 +43,7 @@ export default function PCertificates() {
         ) : (
           <div className="row">
             {certi
-              ? certi.map((cert, index) => <PCard data={cert} key={index} />)
+              ? certi.map((cert, index) => <PCard data={cert} key={index} setDoc={props.setDoc} />)
               : ""}
           </div>
         )}

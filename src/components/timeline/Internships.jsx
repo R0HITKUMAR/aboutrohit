@@ -1,7 +1,7 @@
 import React from "react";
 import { Intern } from "./data.js";
 
-export default function Internships() {
+export default function Internships(props) {
   return (
     <>
       <div className="section-title">
@@ -31,10 +31,14 @@ export default function Internships() {
                 <li>{intern.des}</li>
               </ul>
               <div className="text-center">
-                {intern.button.map((button,index) => (
-                  <a href={button.url} key={index} className="main-btn btn-sm m-1">
+                {intern.button.map((button, index) => (
+                  <buttton
+                    onClick={() => props.setDoc(button.url)}
+                    key={index}
+                    className="main-btn btn-sm m-1"
+                  >
                     {button.name}
-                  </a>
+                  </buttton>
                 ))}
               </div>
             </div>

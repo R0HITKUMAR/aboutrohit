@@ -6,7 +6,7 @@ import CoCurricular from "./CoCurricular";
 import Internships from "./Internships";
 
 
-export default function Timeline() {
+export default function Timeline(props) {
   return (
     <section id="timeline" className="timeline">
       <div className="container">
@@ -18,10 +18,10 @@ export default function Timeline() {
           <div className="col-lg-6 col-12">
             <Education />
             <CoCurricular/>
-            <Internships />
+            <Internships setDoc={props.setDoc}/>
           </div>
           <div className="col-lg-6 col-12">
-            <Achievements />  
+            <Achievements setDoc={props.setDoc}/>  
           </div>
         </div>
       </div>

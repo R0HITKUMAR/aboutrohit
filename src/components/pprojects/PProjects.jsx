@@ -1,10 +1,10 @@
 import React from "react";
 import "./PProjects.css";
-import PCard from "./PCard";
+import PCards from "./PCards";
 import Loader from "../begin/Loader";
 import Data from "./projects/data";
 
-export default function PProjects() {
+export default function PProjects(props) {
   const [loading, setLoading] = React.useState(true);
 
   //Close Loader when data is loaded
@@ -28,7 +28,7 @@ export default function PProjects() {
             <div className="row">
               {Data
                 ? Data.map((project, index) => (
-                    <PCard data={project} key={index} />
+                    <PCards data={project} key={index} setDoc={props.setDoc} />
                   ))
                 : ""}
             </div>

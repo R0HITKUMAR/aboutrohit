@@ -37,6 +37,11 @@
 .navbar {
   padding: 0;
 }
+.navbar button {
+  background: #fafaff00;
+  border: none;
+  padding: 0;
+}
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -47,8 +52,8 @@
 .navbar li {
   position: relative;
 }
-.navbar a,
-.navbar a:focus {
+.navbar button,
+.navbar button:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,13 +65,13 @@
   white-space: nowrap;
   transition: 0.3s;
 }
-.navbar a i,
-.navbar a:focus i {
+.navbar button i,
+.navbar button:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar > ul > li > a:before {
+.navbar > ul > li > button:before {
   content: "";
   position: absolute;
   width: 0;
@@ -78,16 +83,16 @@
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
-.navbar a:hover:before,
-.navbar li:hover > a:before,
+.navbar button:hover:before,
+.navbar li:hover > button:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
 }
-.navbar a:hover,
+.navbar button:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover > button {
   color: #fff;
 }
 
@@ -141,19 +146,19 @@
 .navbar-mobile ul li {
   text-align: center !important;
 }
-.navbar-mobile > ul > li > a:before {
+.navbar-mobile > ul > li > button:before {
   text-align: center !important;
 }
-.navbar-mobile a,
-.navbar-mobile a:focus {
+.navbar-mobile button,
+.navbar-mobile button:focus {
   padding: 5px 20px;
   font-size: 20px;
   font-weight: bolder;
   color: #0205a1;
 }
-.navbar-mobile a:hover,
+.navbar-mobile button:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover > button {
   color: #3f43fd;
 }
 .navbar-mobile .getstarted,

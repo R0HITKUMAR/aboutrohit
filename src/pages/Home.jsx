@@ -11,14 +11,14 @@ import Blog from "../components/blog/Blog.jsx";
 import Map from "../components/contact/Map.jsx";
 import Contact from "../components/contact/Contact.jsx";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       {/* <Preloader /> */}
       <Hero />
       <About />
       <Skills />
-      <Timeline />
+      <Timeline setDoc={props.setDoc}/>
       <Projects />
       <Certificates />
       <Badges />

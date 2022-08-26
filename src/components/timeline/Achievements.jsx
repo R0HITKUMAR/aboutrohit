@@ -1,7 +1,7 @@
 import React from "react";
 import { Achieve } from "./data.js";
 
-export default function Achievements() {
+export default function Achievements(props) {
   return (
     <>
       <div className="section-title">
@@ -26,12 +26,12 @@ export default function Achievements() {
               </ul>
               <div className="text-center">
                 {achieve.name && achieve.url && (
-                  <a
-                    href={achieve.url}
+                  <buttton
+                    onClick={() => props.setDoc(achieve.url)}
                     className="main-btn float-right btn-sm m-1"
                   >
                     {achieve.name}
-                  </a>
+                  </buttton>
                 )}
               </div>
             </div>

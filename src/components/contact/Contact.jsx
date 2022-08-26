@@ -92,7 +92,7 @@ export default function Contact() {
                 {alert}
               </div>
             )}
-            <form action="" method="post" role="form" className="contact-form">
+            <form className="contact-form">
               {/* ----------- */}
               <div className="row">
                 <div className="col-md-6 form-group">

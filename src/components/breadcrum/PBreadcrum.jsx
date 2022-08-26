@@ -1,8 +1,8 @@
 import React from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Breadcrum.css";
 
-export default function Breadcrum(props) {
+export default function PBreadcrum(props) {
   const navigate = useNavigate();
 
   return (
@@ -15,6 +15,9 @@ export default function Breadcrum(props) {
           <ol>
             <li>
               <button onClick={() => navigate('/home')}>Home</button>
+            </li>
+            <li>
+              <button onClick={() => navigate('/projects')}>Project</button>
             </li>
             {props.des && <li>{props.des}</li>}
           </ol>
