@@ -131,7 +131,7 @@ const data = [
     des2: "Contains Proper Query management System for the User.",
     des3: "Features a Map that shows the nearest Ayush Hospital.",
     report: R9,
-    buttons: [{ name: "Live Demo", url: "https://ayushhealthacare.ml" }],
+    buttons: [{ name: "Live Demo", url: "https://ayushhealthcare.ml" }],
     hash: "Ayush-Healthcare",
     imgur: "",
   },
