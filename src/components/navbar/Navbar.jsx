@@ -13,11 +13,11 @@ export default function Navbar() {
 
   const Links = [
     { name: "Home", url: "/home" },
-    { name: "Blog", url: "https://blog.rohitkumar.ml" },
+    { name: "Blog", url: "https://blog.aboutrohit.in" },
     { name: "Resume", url: "/resume" },
     { name: "Certificates", url: "/certificates" },
     { name: "Projects", url: "/projects" },
-    { name: "Login", url: "https://admin.rohitkumar.ml" },
+    { name: "Login", url: "https://admin.aboutrohit.in" },
   ];
 
   return (
@@ -37,19 +37,26 @@ export default function Navbar() {
           <ul className="text-center">
             {Links.map((item, index) => {
               return (
-                <li key={index} >
-                  {item.url === "https://blog.rohitkumar.ml" || item.url === "https://admin.aboutrohit.in" ? (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer">
-                      <button className="nav-link scrollto text-center">
+                <li key={index}>
+                  {item.url === "https://blog.aboutrohit.in" ||
+                  item.url === "https://admin.aboutrohit.in" ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="scrollto text-center">
                         {item.name}
                       </button>
                     </a>
                   ) : (
-
-                    <button className="nav-link scrollto" onClick={() => navigate(item.url)}>
+                    <button
+                      className="scrollto"
+                      onClick={() => navigate(item.url)}
+                    >
                       {item.name}
-                    </button>)
-                  }
+                    </button>
+                  )}
                 </li>
               );
             })}

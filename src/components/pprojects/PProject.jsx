@@ -27,8 +27,18 @@ export default function PProject(props) {
 
   return (
     <>
-      <PBreadcrum des={`${info.title}`} />
-      {loading ? (<Loader/>) : available ? <PCard data={info} setDoc={props.setDoc} /> : <NoRecord />}
+      {available ? (
+        <PBreadcrum des={`${info.title}`} />
+      ) : (
+        <PBreadcrum des={`Error 404!`} />
+      )}
+      {loading ? (
+        <Loader />
+      ) : available ? (
+        <PCard data={info} setDoc={props.setDoc} />
+      ) : (
+        <NoRecord />
+      )}
     </>
   );
 }

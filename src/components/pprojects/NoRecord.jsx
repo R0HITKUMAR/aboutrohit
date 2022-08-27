@@ -5,7 +5,12 @@ export default function NoRecord() {
   return (
     <section id="pprojects" className="pprojects">
       <div className="container text-center">
-        <img src={NoRecordIMG} alt="No Record" style={{height:"500px",width:"auto"}}/>
+        <img
+          src={NoRecordIMG}
+          alt="No Record"
+          className="img-fluid"
+          style={{ width: "100%" }}
+        />
       </div>
     </section>
   );
