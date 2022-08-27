@@ -1,23 +1,10 @@
 import React from "react";
 
 export default function PCard(props) {
-  
   return (
-    <div className="col-lg-4 col-12">
+    <div className="col-4">
       <div className="box">
         <div className="content">
-          <button
-            className="btn btn-sm btn-primary"
-            style={{ float: "left", position: "absolute", left: "0" }}
-            onClick={() => props.setDoc(props.data.View_Link)}
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </button>
-          <iframe
-            src={props.data.View_Link}
-            scrolling="no"
-            title={props.data.Certificate_Name}
-          ></iframe>
           <h3 className="m-2">{props.data.Certificate_Name}</h3>
           <h5 className="p-2">
             {props.data.Certificate_No !== "-" && (
@@ -27,7 +14,6 @@ export default function PCard(props) {
                 <br />
               </div>
             )}
-
             <b>Issued On : </b>
             {props.data.Issue_Date}
             <br />
@@ -35,6 +21,9 @@ export default function PCard(props) {
             {props.data.Issuing_Authority}
           </h5>
         </div>
+        <button className="main-btn" onClick={() => props.setDoc(props.id)}>
+          View
+        </button>
         {props.data.Verify_Link !== "" && (
           <a
             href={props.data.Verify_Link}

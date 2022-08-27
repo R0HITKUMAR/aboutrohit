@@ -1,7 +1,6 @@
 import React from "react";
 
-
-export default function Modal(props) {
+export default function AttachmentViewer(props) {
   const [show, setShow] = React.useState(true);
 
   if (show) {
@@ -45,7 +44,7 @@ export default function Modal(props) {
             </button>
           </div>
           <div className="modal-body">
-          <iframe
+            <iframe
               src={props.url}
               width="100%"
               height="600px"

@@ -1,13 +1,15 @@
 import React from "react";
 // eslint-disable-next-line no-unused-vars
-import App from "../../firebase"
+import App from "../../firebase";
 import { getDatabase, ref, onValue } from "firebase/database";
 import "./PCertificates.css";
 import PCard from "./PCard";
 import Loader from "../begin/Loader";
+import PViewer from "./PViewer";
 
 export default function PCertificates(props) {
   const [certi, setCerti] = React.useState();
+  const [Doc, setDoc] = React.useState("");
   const [loading, setLoading] = React.useState(true);
 
   //Close Loader when data is loaded
@@ -32,6 +34,7 @@ export default function PCertificates(props) {
 
   return (
     <section id="pcertificates" className="pcertificates mb-5">
+      {Doc !== "" ? <PViewer url={Doc} doc={setDoc} /> : null}
       <div className="container">
         <div className="section-title">
           <h2>()</h2>
@@ -43,7 +46,14 @@ export default function PCertificates(props) {
         ) : (
           <div className="row">
             {certi
-              ? certi.map((cert, index) => <PCard data={cert} key={index} setDoc={props.setDoc} />)
+              ? certi.map((cert, index) => (
+                  <PCard
+                    data={cert}
+                    key={index}
+                    id={index + 1}
+                    setDoc={setDoc}
+                  />
+                ))
               : ""}
           </div>
         )}
