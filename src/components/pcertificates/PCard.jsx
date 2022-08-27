@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PCard(props) {
   return (
-    <div className="col-4">
+    <div className="col-md-4 col-12">
       <div className="box">
         <div className="content">
           <h3 className="m-2">{props.data.Certificate_Name}</h3>
