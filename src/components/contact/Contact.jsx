@@ -1,10 +1,9 @@
 import React from "react";
-import { getDatabase, ref, set } from "firebase/database";
+import axios from "axios";
 import "./Contact.css";
 
 export default function Contact() {
   const [alert, setAlert] = React.useState();
-  const [Flag, setFlag] = React.useState(true);
   const [data, setData] = React.useState({
     Name: "",
     Phone: "",
@@ -20,40 +19,28 @@ export default function Contact() {
         [name]: value,
       };
     });
-    const emailcheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (
-      (name === "Email" && emailcheck.test(value)) ||
-      (name === "Phone" && value.length === 10)
-    ) {
-      setAlert("");
-      setFlag(false);
-    } else {
-      setFlag(true);
-      setAlert(`Enter a Valid ${name} Address`);
-    }
   }
 
   function submitData(event) {
     event.preventDefault();
-    if (!Flag) {
-      const db = getDatabase();
-      var today = new Date().toLocaleString();
-      var ID = "RK" + Date.now();
-      set(ref(db, "Contact-Form/" + ID), {
-        Name: data.Name,
-        Phone: data.Phone,
-        Email: data.Email,
-        Message: data.Message,
-        Status: "Submitted",
-        TimeStamp: today,
-      })
-        .then(() => {
-          setAlert("Success! Thanks for Contacting Me.");
-          setData({ Name: "", Phone: "", Email: "", Message: "" });
-        })
-        .catch((error) => {
-          setAlert("Error!</strong> {error.message}");
-        });
+    if (data.Email && data.Name && data.Phone && data.Message) {
+      if (
+        data.Email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) &&
+        data.Phone.length === 10
+      ) {
+        axios
+          .post("http://localhost:5000/query/add", data)
+          .then((res) => {
+            setAlert(res.data.message);
+            setData({ Name: "", Phone: "", Email: "", Message: "" });
+          })
+          .catch((err) => {
+            setAlert("Error!</strong> {error.message}");
+            console.log(err);
+          });
+      } else {
+        setAlert("Enter a Valid Email or Phone Number");
+      }
     } else {
       setAlert("Something is Missing");
     }

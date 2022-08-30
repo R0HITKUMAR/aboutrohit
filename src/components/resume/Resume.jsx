@@ -1,6 +1,5 @@
 import React from "react";
 import Loader from "../begin/Loader";
-import img from "./resume.svg";
 
 export default function Resume() {
   const [loading, setLoading] = React.useState(true);
@@ -47,6 +46,7 @@ export default function Resume() {
                   src="https://www.canva.com/design/DAFCYRJMClU/view?embed"
                   allowFullScreen="allowfullscreen"
                   allow="fullscreen"
+                  title="resume"
                 ></iframe>
               </div>
             </div>

@@ -1,42 +1,32 @@
 import React from "react";
-import { getDatabase,ref, set } from "firebase/database";
+import axios from "axios";
 
 export default function NewsletterForm() {
-  const [EmailID, setEmailID] = React.useState("");
-  const [Flag, setFlag] = React.useState(true);
   const [Alert, setAlert] = React.useState();
+  const [data, setdata] = React.useState({
+    Email_ID: "",
+  });
 
   function handleChange(event) {
-    const emailcheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailcheck.test(event.target.value)) {
-      setAlert("");
-      setEmailID(event.target.value);
-      setFlag(false);
-    } else {
-      setEmailID(event.target.value);
-      setFlag(true);
-      setAlert("Please Enter a valid email address");
-    }
+    const { name, value } = event.target;
+    setdata({ ...data, [name]: value });
   }
 
   function submitData(event) {
     event.preventDefault();
-    var today = new Date().toLocaleString();
-    if (!Flag) {
-      const db = getDatabase();
-      var ID = "RK" + Date.now();
-      set(ref(db, "Newsletter-Form/" + ID), {
-        Name:"Not Available",
-        Email_ID: EmailID,
-        Timestamp: today,
-      })
-        .then(() => {
-          setEmailID("");
-          setAlert("Subscription Successful");
+    if (data.Email_ID.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      axios
+        .post("http://localhost:5000/newsletter/add", data)
+        .then((res) => {
+          setAlert(res.data.message);
+          setdata({ Email_ID: "" });
         })
-        .catch((error) => {
-          setAlert("Error! " + error.message);
+        .catch((err) => {
+          setAlert(`Error!</strong> ${err.message}`);
+          console.log(err);
         });
+    } else {
+      setAlert("Please enter a valid email address");
     }
   }
 
@@ -48,9 +38,9 @@ export default function NewsletterForm() {
         <input
           onChange={handleChange}
           type="email"
-          name="Email"
+          name="Email_ID"
           placeholder="Enter Email ID"
-          value={EmailID}
+          value={data.Email_ID}
         />
         <button onClick={submitData} type="submit">
           Subscribe
