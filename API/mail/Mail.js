@@ -2,16 +2,12 @@ import nodemailer from "nodemailer";
 import hbs from "nodemailer-express-handlebars";
 import path from "path";
 
-var transporter = nodemailer.createTransport({
-  host: "smtp.office365.com",
-  secureConnection: false,
-  port: 587,
-  tls: {
-    ciphers: "SSLv3",
-  },
+let transporter = nodemailer.createTransport({
+  host: "smtp.elasticemail.com",
+  port: 2525,
   auth: {
-    user: "mail@aboutrohit.in",
-    pass: "RK@MS@1234",
+    user: "no-reply@aboutrohit.in",
+    pass: "53FCED22F266F483330AFF10827E3D6E91B4",
   },
 });
 
@@ -27,7 +23,7 @@ transporter.use("compile", hbs(handlebarOptions));
 
 function sendOTPMail(email, otp, reason, sub) {
   var mailOptions = {
-    from: "Rohit Kumar <mail@aboutrohit.in>",
+    from: "Rohit Kumar <no-reply@aboutrohit.in>",
     to: email,
     subject: sub,
     template: "otp",
@@ -46,11 +42,14 @@ function sendOTPMail(email, otp, reason, sub) {
   });
 }
 
+// sendOTPMail("r.k2962002@gmail.com", "123456", "Login", "Login OTP");
+// sendWelcomeMail("r.k2962002@gmail.com")
+
 function sendWelcomeMail(email) {
   var mailOptions = {
-    from: "Rohit Kumar <mail@aboutrohit.in>",
+    from: "Rohit Kumar <no-reply@aboutrohit.in>",
     to: email,
-    subject: "Welcome to Resumee!",
+    subject: "Welcome to Rohit Kumar!",
     template: "welcome",
   };
 
@@ -63,4 +62,22 @@ function sendWelcomeMail(email) {
   });
 }
 
-export { sendOTPMail, sendWelcomeMail };
+function sendSubscription(email) {
+  var mailOptions = {
+    from: "Rohit Kumar <no-reply@aboutrohit.in>",
+    to: email,
+    subject: "Thanks for Subscribing Me.!",
+    template: "subscribe",
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+}
+
+
+export { sendOTPMail, sendWelcomeMail,sendSubscription };
