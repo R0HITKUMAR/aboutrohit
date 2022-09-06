@@ -4,15 +4,15 @@ import { sendSubscription } from "./mail/Mail.js";
 function addNewsletter(req, res) {
   const newsletter = new Newsletter(req.body);
   // Check if email already exists
-  Newsletter.findOne({ email: newsletter.email })
-    .then((newsletter) => {
-      if (newsletter) {
-        return res.send({ email: "You are already Subscribed!" });
+  Newsletter.findOne({ Email_ID: newsletter.Email_ID })
+    .then((newsl) => {
+      if (newsl) {
+        return res.send({ message: "You are already Subscribed!" });
       } else {
         newsletter
           .save()
           .then(() => {
-            sendSubscription(newsletter.email);
+            sendSubscription(newsletter.Email_ID);
             res.send({ message: "Subscription Successfull" });
           })
           .catch((err) => res.send({ message: err }));
