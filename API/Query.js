@@ -4,7 +4,9 @@ function addQuery(req, res) {
   const query = new Query(req.body);
   query
     .save()
-    .then(() => res.send({ message: "Query added successfully" }))
+    .then(() => {
+      res.send({ message: "Query added successfully" });
+    })
     .catch((err) => res.send({ message: err }));
 }
 
