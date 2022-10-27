@@ -11,6 +11,7 @@ import Certificate from "./routes/Certificate.js";
 import Query from "./routes/Query.js";
 import Newsletter from "./routes/Newsletter.js";
 import URL from "./routes/URL.js";
+import File from "./routes/FileUpload.js";
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const PORT = process.env.PORT || 5000;
@@ -31,6 +32,7 @@ rohitServer.use("/certificate", Certificate);
 rohitServer.use("/query", Query);
 rohitServer.use("/newsletter", Newsletter);
 rohitServer.use("/url", URL);
+rohitServer.use("/file", File);
 
 rohitServer.get("/", (req, res) => {
   res.send("Hello World");
