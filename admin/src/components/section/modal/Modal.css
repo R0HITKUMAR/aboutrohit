@@ -1,0 +1,47 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.modal-content {
+  padding: 0px;
+  background: var(--light);
+  border-radius: 20px;
+  display: flex;
+  color: var(--dark);
+}
+
+.modal-header {
+  padding: 5px 0px;
+  align-items: center;
+  justify-content: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-body {
+  padding: 0px 0px;
+}
+
+.modal i {
+  color: var(--light);
+}
+
+.modal a,
+.modal a:active,
+.modal a:hover,
+.modal button,
+.modal button:hover,
+.modal button:focus {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background: var(--dark);
+  color: var(--light);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

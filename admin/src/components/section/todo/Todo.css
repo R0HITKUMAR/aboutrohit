@@ -1,0 +1,53 @@
+#todo .box-info {
+  padding-left: 0rem !important;
+  margin-top: 20px;
+  overflow: scroll;
+}
+#todo .box-info div {
+  padding: 10px;
+  background: var(--light);
+  border-radius: 20px;
+  align-items: center;
+}
+
+#todo .box-info .box-info-head h5 {
+  display: inline;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+}
+#todo .box-info .box-info-footer {
+  float: right;
+}
+#todo .box-info .box-info-footer .fa {
+  margin: 0px 5px;
+  color: var(--dark);
+}
+
+#todo input,
+#todo textarea,
+#todo input:focus,
+#todo textarea:focus {
+  outline: none;
+  border: 0px;
+  color: inherit;
+  background: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#todo input::placeholder,
+#todo textarea::placeholder {
+  color: inherit;
+}
+
+#todo input,
+#todo textarea,
+#todo .text-bg-warning input {
+  width: 100% !important;
+}
+
+#todo .box-info-footer button {
+  background: none;
+  color: var(--dark);
+  border: 0px;
+}

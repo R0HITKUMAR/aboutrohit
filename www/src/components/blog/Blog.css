@@ -1,0 +1,70 @@
+/* Recent Blogs */
+.blog .box {
+  margin: 10px;
+  padding: 0px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+}
+.blog .box:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+.blog .box .content {
+  height: 380px;
+}
+.blog .box img {
+  width: 100%;
+  height: 200px;
+}
+
+.blog .box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  color: #777777;
+}
+.blog .box p {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 10px;
+  color: #000000;
+}
+
+.blog .btn-link {
+  background: #ffffff00;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border: 2px solid #010483;
+  color: #010483;
+  display: inline-block;
+  padding: 5px 50px 5px 50px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.blog .btn-link:hover {
+  background: #010483;
+  border: 2px solid #010483;
+  color: white;
+}
+
+.blog .advanced {
+  width: 200px;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: #010483;
+  color: #fff;
+}

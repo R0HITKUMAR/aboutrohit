@@ -1,0 +1,213 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+@import url("https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i");
+@import url("./vendor/bootstrap-icons/bootstrap-icons.css");
+@import url("./vendor/boxicons/css/boxicons.min.css");
+@import url("./vendor/remixicon/remixicon.css");
+
+/* General */
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #010483;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #010483;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.row {
+  padding: 0px important;
+}
+
+/* Sections General */
+section {
+  padding: 50px 0px 0px 0px;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f5f5ff;
+}
+
+.section-title {
+  padding-bottom: 20px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex !important;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #010483;
+  margin: 0px 5px;
+}
+
+.section-title h2::before {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #010483;
+  margin: 0px 5px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #010483;
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex !important;
+}
+
+@media screen and (max-width: 800px) {
+  .section-title h2 {
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .section-title h2::after,
+  .section-title h2::before {
+    width: 60px;
+  }
+  .section-title p {
+    font-size: 24px;
+  }
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1acc8d;
+  border-top-color: #d2f9eb;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Back to top Button */
+.back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #ffffff00;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #191ca9;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #191ca9;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #191ca9;
+  color: #fff;
+}
+.back-to-top i:hover {
+  color: #fff;
+}
+
+/* Main Button */
+.main-btn {
+  background: #ffffff00;
+  cursor: pointer !important;
+  border: 2px solid #191ca9;
+  padding: 2px 30px;
+  margin: 10px;
+  color: #191ca9;
+  font-weight: 700;
+  transition: 0.4s;
+  border-radius: 50px;
+  display: inline-block;
+}
+.main-btn:hover {
+  background: #191ca9;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.modal .fa {
+  color: black;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 0px;
+}

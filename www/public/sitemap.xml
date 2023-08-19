@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://aboutrohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aboutohit.in/resume</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://aboutrohit.in/certificates</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://aboutrohit.in/projects</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://admin.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://blog.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://v3.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v2.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v1.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://myaktuguide.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://verifytechwamp.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://moi.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://v1.admin.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://v1.verifytechwamp.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://v1.myaktuguide.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://v2.myaktuguide.aboutohit.in/</loc>
+  <lastmod>2021-05-20T07:07:51+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+
+
+</urlset>

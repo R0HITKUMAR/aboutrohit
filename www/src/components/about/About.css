@@ -1,0 +1,21 @@
+/* About */
+.about {
+  padding: 40px 0 0 0;
+}
+.about h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #010483;
+  margin-bottom: 5px;
+}
+
+.about p {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.about .main-btn{
+  margin: 3px 2px;
+}
