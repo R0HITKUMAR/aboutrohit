@@ -36,14 +36,14 @@ export default function Resume() {
                   position: "absolute",
                   width: "100%",
                   height: "100%",
-                  title:"My Resume",
+                  title: "My Resume",
                   top: 0,
                   left: 0,
                   border: "none",
                   padding: 0,
                   margin: 0,
                 }}
-                src="https://www.canva.com/design/DAFCYRJMClU/view?embed"
+                src="https://www.canva.com/design/DAFiKrspo5M/view?embed"
                 allowFullScreen="allowfullscreen"
                 allow="fullscreen"
               ></iframe>
