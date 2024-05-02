@@ -24,7 +24,7 @@ transporter.use("compile", hbs(handlebarOptions));
 
 function sendOTPMail(email, otp) {
   var mailOptions = {
-    from: "Rohit Kumar <r.k2962002@gmail.com>",
+    from: "Rohit Kumar <noreply@aboutrohit.in>",
     to: email,
     subject: "OTP to Reset Password on Admin Dashboard",
     template: "otp",
@@ -45,7 +45,7 @@ function sendOTPMail(email, otp) {
 
 function sendSubscription(email) {
   var mailOptions = {
-    from: "Rohit Kumar <r.k2962002@gmail.com>",
+    from: "Rohit Kumar <noreply@aboutrohit.in>",
     to: email,
     subject: "Thanks for Subscribing Me.!",
     template: "subscribe",
